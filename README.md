@@ -13,3 +13,10 @@
     +  readFile() 读取文件
     +  unlink() 删除文件
     +  stat() 查看文件类型
+    +  url.parse()
+    +  querystring.parse()
+    +  querystring.escape() 编码 unescape() 解码
+
+#### 邮箱验证码案例
++  nodemailer 可以实现发送邮件
+TODO  ------封装-----------

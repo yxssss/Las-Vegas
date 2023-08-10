@@ -1,10 +1,10 @@
 
-node01
-node02
 text.js
+node01
  -inxex.js
  -mkdir.js
  -node.js
+node02
  -node02.js
  -text
  -dirtree.js
