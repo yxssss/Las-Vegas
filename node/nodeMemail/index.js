@@ -8,7 +8,7 @@ let transporter = nodemailer.createTransport({
     secure:true,
     auth: {
         user: "1041862673@qq.com",
-        pass: testAccount.pass
+        pass: "testAccount.pass"
     }
 })
 
@@ -19,10 +19,22 @@ let mailobj = {
     to: 'bar@example.com, baz@example.com',
     subjuct: 'Hello',
     text: 'Hello world?',
-    html: '<b>Hello world?</b>',
+    // html: '<b>Hello world?</b>',
 }
 
 //发送邮件
-transporter.sendMail(mailobj)
+// transporter.sendMail(mailobj)
 
 //封装一个自定义模块，向固定的邮箱发送固定的信息
+
+let sendMails = {
+    mailobjs:{...mailobj},
+    pushMail(e,a) {
+        sendMails.mailobjs.to = e
+        sendMails.mailobjs.text = a
+        // transporter.sendMail(mailobjs)
+        console.log(sendMails);
+    }
+}
+
+module.exports = sendMails
