@@ -5,8 +5,15 @@ const express = require("express")
 const app = express()
 
 app.get('/user/login',(req,res)=> {
+    console.log(req.query);
+    let {user, pas} = req.query
+    if (user === 'yang' && pas === '123456') {
+        // http://localhost:3000/user/login?user=yang&pas=123456
+        res.send("注册成功")
+    }else {
+        res.send("失败")
+    }
     console.log("susses");
-    res.send("注册成功")
 })
 
 
@@ -16,3 +23,5 @@ app.listen("3000",()=> {
 })
 
 // http://localhost:3000/user/login
+// http://192.168.9.10:3000/user/login
+// 192.168.9.10
