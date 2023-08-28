@@ -16,6 +16,10 @@ app.get('/user/login',(req,res)=> {
     console.log("susses");
 })
 
+app.post('/user/reg',(req,res)=> {
+    console.log(req.body);
+    
+})
 
 app.listen("3000",()=> {
     // 监听 3000 端口  开启服务器
